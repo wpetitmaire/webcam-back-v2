@@ -23,7 +23,8 @@ public class CaptureRestRessource {
 
     @GetMapping(produces = MediaType.IMAGE_JPEG_VALUE)
     public @ResponseBody byte[] getNewCapture() throws IOException {
-        File file = new File("/Users/willy/raspberry_apps/photo/captures/biere.jpg");
+        log.info("getNewCapture");
+        File file = new File(takeCaptureUseCase.takeNewCapture());
         InputStream fileInputStream = new FileInputStream(file);
         return IOUtils.toByteArray(fileInputStream);
     }

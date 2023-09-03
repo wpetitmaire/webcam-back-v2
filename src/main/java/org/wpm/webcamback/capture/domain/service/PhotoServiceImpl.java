@@ -13,8 +13,6 @@ public class PhotoServiceImpl implements PhotoService{
 
     @Override
     public String takeANewPhoto() {
-        log.info("taking new photo");
-
        return raspberryService.takePhoto();
     }
 }
