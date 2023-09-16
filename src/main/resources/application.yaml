@@ -1,3 +1,7 @@
 raspberry:
   photo:
     location: /Users/willy/raspberry_apps/photo/captures/
+  scripts:
+    location: /Users/willy/raspberry_apps/photo/scripts/
+    capture:
+      name: takeCapture.sh

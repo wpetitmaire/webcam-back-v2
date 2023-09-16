@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import org.wpm.webcamback.capture.domain.exception.CaptureException;
 import org.wpm.webcamback.capture.usecase.TakeCaptureUseCase;
 
 import java.io.File;
@@ -22,7 +23,7 @@ public class CaptureRestRessource {
     final TakeCaptureUseCase takeCaptureUseCase;
 
     @GetMapping(produces = MediaType.IMAGE_JPEG_VALUE)
-    public @ResponseBody byte[] getNewCapture() throws IOException {
+    public @ResponseBody byte[] getNewCapture() throws IOException, CaptureException {
         log.info("getNewCapture");
         File file = new File(takeCaptureUseCase.takeNewCapture());
         InputStream fileInputStream = new FileInputStream(file);

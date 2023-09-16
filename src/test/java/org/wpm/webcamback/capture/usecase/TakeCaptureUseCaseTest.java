@@ -1,10 +1,11 @@
 package org.wpm.webcamback.capture.usecase;
 
+import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.wpm.webcamback.BackApplication;
-import org.wpm.webcamback.capture.domain.service.PhotoService;
+import org.wpm.webcamback.capture.domain.service.CaptureService;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -12,13 +13,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 class TakeCaptureUseCaseTest {
 
     @Autowired
-    PhotoService photoService;
+    CaptureService captureService;
 
+    @SneakyThrows
     @Test
     void shouldReturnPhotoPath() {
-        String photoPath = photoService.takeANewPhoto();
+        String photoPath = captureService.takeANewCapture();
 
-        assertThat(photoPath).isEqualTo("/Users/willy/raspberry_apps/photo/captures/biere.jpg");
+        assertThat(photoPath).isEqualTo("/Users/willy/raspberry_apps/photo/captures/lastCapture.jpg");
     }
 
 }
