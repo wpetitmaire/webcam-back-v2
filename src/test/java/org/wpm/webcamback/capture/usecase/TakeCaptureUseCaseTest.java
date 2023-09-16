@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.wpm.webcamback.BackApplication;
 import org.wpm.webcamback.capture.domain.service.CaptureService;
+import org.wpm.webcamback.capture.domain.entity.Capture;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -18,9 +19,9 @@ class TakeCaptureUseCaseTest {
     @SneakyThrows
     @Test
     void shouldReturnPhotoPath() {
-        String photoPath = captureService.takeANewCapture();
+        Capture capture = Capture.fromAbsolutePath(captureService.takeANewCapture());
 
-        assertThat(photoPath).isEqualTo("/Users/willy/raspberry_apps/photo/captures/lastCapture.jpg");
+        assertThat(capture.absolutePath()).isEqualTo("/Users/willy/raspberry_apps/photo/captures/lastCapture.jpg");
     }
 
 }
