@@ -3,8 +3,11 @@ package org.wpm.webcamback.capture.usecase;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.wpm.webcamback.capture.domain.entity.Capture;
 import org.wpm.webcamback.capture.domain.exception.CaptureException;
 import org.wpm.webcamback.capture.domain.service.CaptureService;
+
+import java.io.File;
 
 @Service
 @Slf4j
@@ -13,7 +16,7 @@ public class TakeCaptureUseCase {
 
     final CaptureService captureService;
 
-    public String takeNewCapture() throws CaptureException {
+    public Capture takeNewCapture() throws CaptureException {
         return captureService.takeANewCapture();
     }
 

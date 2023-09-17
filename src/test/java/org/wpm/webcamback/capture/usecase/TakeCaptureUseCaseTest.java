@@ -19,7 +19,7 @@ class TakeCaptureUseCaseTest {
     @SneakyThrows
     @Test
     void shouldReturnPhotoPath() {
-        Capture capture = Capture.fromAbsolutePath(captureService.takeANewCapture());
+        Capture capture = captureService.takeANewCapture();
 
         assertThat(capture.absolutePath()).isEqualTo("/Users/willy/raspberry_apps/photo/captures/lastCapture.jpg");
     }

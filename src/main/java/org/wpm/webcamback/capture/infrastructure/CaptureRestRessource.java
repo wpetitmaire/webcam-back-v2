@@ -25,7 +25,7 @@ public class CaptureRestRessource {
     @GetMapping(produces = MediaType.IMAGE_JPEG_VALUE)
     public @ResponseBody byte[] getNewCapture() throws IOException, CaptureException {
         log.info("getNewCapture");
-        File file = new File(takeCaptureUseCase.takeNewCapture());
+        File file = takeCaptureUseCase.takeNewCapture().fileFromPath();
         InputStream fileInputStream = new FileInputStream(file);
         return IOUtils.toByteArray(fileInputStream);
     }

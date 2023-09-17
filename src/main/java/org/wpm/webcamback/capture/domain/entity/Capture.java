@@ -1,5 +1,6 @@
 package org.wpm.webcamback.capture.domain.entity;
 
+import java.io.File;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
@@ -23,6 +24,10 @@ public record Capture(String path, LocalDateTime creationTime, String name) {
 
     public String absolutePath() {
         return path+name;
+    }
+
+    public File fileFromPath() {
+        return new File(absolutePath());
     }
 
 }
