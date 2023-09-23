@@ -1,4 +1,4 @@
-package org.wpm.webcamback.helpers;
+package org.wpm.webcamback.capture.infrastructure.helpers;
 
 public class CommandLineException extends Exception {
 

@@ -1,14 +1,12 @@
-package org.wpm.webcamback.helpers;
+package org.wpm.webcamback.capture.infrastructure.helpers;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
-import org.wpm.webcamback.helpers.service.CommandLineService;
+import org.wpm.webcamback.capture.infrastructure.helpers.service.CommandLineService;
 
 import java.io.IOException;
 
 import static java.lang.String.format;
 
-@Service
 @Slf4j
 public class CommandLineServiceImpl implements CommandLineService {
 

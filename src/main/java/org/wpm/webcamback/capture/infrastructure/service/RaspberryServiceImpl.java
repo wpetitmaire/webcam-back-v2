@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.wpm.webcamback.capture.domain.service.RaspberryService;
 import org.wpm.webcamback.capture.infrastructure.exception.RaspberryException;
-import org.wpm.webcamback.helpers.CommandLineException;
-import org.wpm.webcamback.helpers.service.CommandLineService;
+import org.wpm.webcamback.capture.infrastructure.helpers.CommandLineException;
+import org.wpm.webcamback.capture.infrastructure.helpers.service.CommandLineService;
 
-@Service
+//@Service
 @Slf4j
 @RequiredArgsConstructor
 public class RaspberryServiceImpl implements RaspberryService {
