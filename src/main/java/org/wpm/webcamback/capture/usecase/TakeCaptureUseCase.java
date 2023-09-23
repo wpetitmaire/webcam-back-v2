@@ -7,8 +7,6 @@ import org.wpm.webcamback.capture.domain.entity.Capture;
 import org.wpm.webcamback.capture.domain.exception.CaptureException;
 import org.wpm.webcamback.capture.domain.service.CaptureService;
 
-import java.io.File;
-
 @Service
 @Slf4j
 @RequiredArgsConstructor

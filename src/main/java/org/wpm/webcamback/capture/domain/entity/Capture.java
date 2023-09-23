@@ -11,10 +11,6 @@ import static java.time.LocalDateTime.now;
 
 public record Capture(String path, LocalDateTime creationTime, String name) {
 
-    public Capture(String path, String filename) {
-        this(path, now(), filename);
-    }
-
     public static Capture fromAbsolutePath(String absolutePath) {
         List<String> list = Arrays.stream(absolutePath.split("/")).collect(Collectors.toList());
         String filename = list.remove(list.size() - 1);
