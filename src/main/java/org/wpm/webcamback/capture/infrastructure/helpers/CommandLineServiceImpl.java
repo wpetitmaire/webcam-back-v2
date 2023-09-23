@@ -11,12 +11,12 @@ import static java.lang.String.format;
 public class CommandLineServiceImpl implements CommandLineService {
 
     @Override
-    public boolean runScript(String scriptPath, String scriptName) throws CommandLineException {
+    public void runScript(String scriptPath, String scriptName) throws CommandLineException {
         log.info("run script {}{}", scriptPath, scriptName);
 
         try {
             Process process = Runtime.getRuntime().exec(format("%s/%s", scriptPath, scriptName));
-            return process.waitFor() == 0;
+            process.waitFor();
         } catch (IOException | InterruptedException e) {
             throw new CommandLineException(
                 format(

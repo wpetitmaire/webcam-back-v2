@@ -3,7 +3,6 @@ package org.wpm.webcamback.capture.infrastructure.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
 import org.wpm.webcamback.capture.domain.service.RaspberryService;
 import org.wpm.webcamback.capture.infrastructure.exception.RaspberryException;
 import org.wpm.webcamback.capture.infrastructure.helpers.CommandLineException;
