@@ -1,4 +1,4 @@
-package org.wpm.webcamback.capture.infrastructure.exception;
+package org.wpm.webcamback.infrastructure.capture.exception;
 
 public class RaspberryException extends Exception{
     public RaspberryException(String message, Throwable cause) {

@@ -1,4 +1,4 @@
-package org.wpm.webcamback.capture.domain.entity;
+package org.wpm.webcamback.domain.capture.entity;
 
 import java.io.File;
 import java.time.LocalDateTime;

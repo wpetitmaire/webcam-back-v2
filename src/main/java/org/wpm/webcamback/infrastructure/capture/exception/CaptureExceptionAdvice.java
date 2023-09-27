@@ -1,4 +1,4 @@
-package org.wpm.webcamback.capture.infrastructure.output.exceptions;
+package org.wpm.webcamback.infrastructure.capture.exception;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

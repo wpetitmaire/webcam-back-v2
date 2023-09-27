@@ -1,11 +1,11 @@
-package org.wpm.webcamback.capture.domain.service;
+package org.wpm.webcamback.domain.capture.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.wpm.webcamback.capture.domain.entity.Capture;
-import org.wpm.webcamback.capture.domain.exception.CaptureException;
-import org.wpm.webcamback.capture.infrastructure.exception.RaspberryException;
+import org.wpm.webcamback.domain.capture.exception.CaptureException;
+import org.wpm.webcamback.domain.capture.entity.Capture;
+import org.wpm.webcamback.infrastructure.capture.exception.RaspberryException;
 
 @Service
 @Slf4j

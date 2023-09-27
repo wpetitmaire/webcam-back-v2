@@ -1,4 +1,4 @@
-package org.wpm.webcamback.capture.infrastructure.output.exceptions;
+package org.wpm.webcamback.infrastructure.capture.exception;
 
 public class CaptureNotFoundException extends RuntimeException {
     public CaptureNotFoundException(String capturePath) {

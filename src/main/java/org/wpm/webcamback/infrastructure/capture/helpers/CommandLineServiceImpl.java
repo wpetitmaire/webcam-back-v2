@@ -1,7 +1,7 @@
-package org.wpm.webcamback.capture.infrastructure.helpers;
+package org.wpm.webcamback.infrastructure.capture.helpers;
 
 import lombok.extern.slf4j.Slf4j;
-import org.wpm.webcamback.capture.infrastructure.helpers.service.CommandLineService;
+import org.wpm.webcamback.infrastructure.capture.helpers.service.CommandLineService;
 
 import java.io.IOException;
 
