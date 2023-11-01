@@ -1,8 +1,10 @@
 raspberry:
   photo:
-    location: /Users/willy/raspberry_apps/photo/captures/
+#    location: /Users/willy/raspberry_apps/photo/captures/
+    location: /workspace/captures/
   scripts:
-    location: /Users/willy/raspberry_apps/photo/scripts/
+#    location: /Users/willy/raspberry_apps/photo/scripts/
+    location: /workspace/scripts/
     capture:
       name: takeCapture.sh
   mock: true

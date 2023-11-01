@@ -7,15 +7,18 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static java.lang.String.format;
+import static java.lang.String.join;
 import static java.time.LocalDateTime.now;
+import static java.util.Arrays.stream;
+import static java.util.stream.Collectors.toList;
 
 public record Capture(String path, LocalDateTime creationTime, String name) {
 
     public static Capture fromAbsolutePath(String absolutePath) {
-        List<String> list = Arrays.stream(absolutePath.split("/")).collect(Collectors.toList());
+        List<String> list = stream(absolutePath.split("/")).collect(toList());
         String filename = list.remove(list.size() - 1);
 
-        return new Capture(format("%s/", String.join("/", list)), now(), filename);
+        return new Capture(format("%s/", join("/", list)), now(), filename);
     }
 
     public String absolutePath() {

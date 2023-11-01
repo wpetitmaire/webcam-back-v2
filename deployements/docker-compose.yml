@@ -1,0 +1,8 @@
+services:
+  app:
+    image: test-image:latest
+    ports:
+      - "9091:8080"
+    volumes:
+      - /Users/willy/raspberry_apps/photo/scripts:/workspace/scripts
+      - /Users/willy/raspberry_apps/photo/captures:/workspace/captures
